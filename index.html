@@ -35,7 +35,7 @@
     </div>
     <!--SEÇÃO VIDEO-->
     <div id="secaovideo">
-        <iframe id="video" width="502" height="283" src="https://www.youtube.com/watch?v=elIl48sZ3rA" title="Mc Suave -  Oração" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe id="video" width="502" height="283" src="https://www.youtube.com/embed/elIl48sZ3rA?si=M-fGkasr6j5lOeFq&amp;controls=0&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         
          <div id="div-interna">
             <h1 id="titulo-video">
@@ -71,13 +71,21 @@
     <img id="pato" src="./assets/pato.gif">
    </div>
    
-   <!-- POP-UP ao concluir o envio do Formulario / Modal -->
+   <!-- Modal concluir o envio do Formulario -->
    <div id="modal" class="modal">
     <div class="modal-content">
-      <p>Obrigado!</p>
+      <p id="conclusao-form">Obrigado!</p>
+    </div>
+  </div>
+
+     <!-- Negar acesso ao DevTools--> 
+ <div id="modal-alert" class="modal-alert">
+    <div class="modal-content-alert">
+      <p id="conclusao-form">Acesso não autorizado! Favor contactar o Desenvolvedor.</p>
     </div>
   </div>
 </div>
+
   
 </body>
 

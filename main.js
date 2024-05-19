@@ -1,24 +1,23 @@
 /* Declarando as variaveis */
-var SetaDireita = window.document.getElementById("seta_direita")
-var Leonardo = window.document.getElementById("Leonardo")
-var Samantha = window.document.getElementById("Samantha")
-var Bruna = window.document.getElementById("Bruna")
-var SetaEsquerda = window.document.getElementById("seta_esquerda")
+var SetaDireita = document.getElementById("seta_direita");
+var Leonardo = document.getElementById("Leonardo");
+var Samantha = document.getElementById("Samantha");
+var Bruna = document.getElementById("Bruna");
+var SetaEsquerda = document.getElementById("seta_esquerda");
 
 /* Criando as funções para o Carrossel */
 function RolarDireita() {
-
-    Leonardo.style = "display:none"
-    Bruna.style = "display:flex"
-    SetaDireita.style = "display:none"
-    SetaEsquerda.style = "display:flex"
+    Leonardo.style.display = "none";
+    Bruna.style.display = "flex";
+    SetaDireita.style.display = "none";
+    SetaEsquerda.style.display = "flex";
 }
 
 function RolarEsquerda() {
-    Leonardo.style = "display:flex"
-    Bruna.style = "display:none"
-    SetaDireita.style = "display:flex"
-    SetaEsquerda.style = "display:none"
+    Leonardo.style.display = "flex";
+    Bruna.style.display = "none";
+    SetaDireita.style.display = "flex";
+    SetaEsquerda.style.display = "none";
 }
 
 /* Function para limitar a quantidade de digitos */
@@ -60,7 +59,6 @@ document.getElementById('formulario').addEventListener('submit', function (event
     var modal = document.getElementById("modal");
     modal.style.display = "block";
 
-   
     // Aguarda um pequeno intervalo antes de permitir o envio real do formulário
     setTimeout(function () {
         // Fecha o modal
@@ -70,6 +68,24 @@ document.getElementById('formulario').addEventListener('submit', function (event
         event.target.submit(); // Envio direto do formulário usando o evento
     }, 2000); // Espera 2 segundos (2000 milissegundos) antes de enviar o formulário
 });
+
+/* Não permitir acesso ao DevTools */
+document.addEventListener("contextmenu", eventHandler);
+document.addEventListener("keydown", eventHandler);
+document.addEventListener("click", function(event) {
+    var modalNegacao = document.getElementById("modal-alert");
+    if (modalNegacao.style.display === "block") {
+        modalNegacao.style.display = "none";
+    }
+});
+
+function eventHandler(event){
+    if(event.type === "contextmenu" || event.key === "F12"){
+        var modalNegacao = document.getElementById("modal-alert");
+        modalNegacao.style.display = "block";
+        event.preventDefault();
+    }
+}
 
 /* Carregamento */
 document.addEventListener("DOMContentLoaded", function () {
