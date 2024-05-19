@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+body{
+    background:#0f0e1e;
+}
+
+#logo{
+    width:125px;
+     height:62px;
+    margin: 3% 0 0 3%;
+}
+#titulo-menusup{
+    color: #FFFF;
+    background: none;
+    margin: 2% 0 0 8%;
+}
+
+#texto-menusup{
+    color:#FFFF;
+    background: none;
+    margin: 2% 0 0 8%;
+    padding-bottom: 5%; 
+}
+
+#menusuperior{
+    background: url(./assets/backgroud_top.svg) no-repeat;
+    background-size: cover;
+}
+
+#menu-info{
+    background: url(./assets/tec.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    margin: 0.32em 0.63em 0 0.63em;
+    border: 2px solid rgb(0 255 252);
+    border-radius: 0 3em 3em 8em;  
+}
+
+.icone{
+    margin: 3.1em 0 3.1em 6.3em;
+    padding: 1.4em;
+}
+
+.texto-info{
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+ }
+.havard{
+    font-weight: bolder;
+    color: red;
+    text-decoration: none;
+   transition: 1s;
+}
+
+.havard:hover{
+    box-shadow: outset 0px 0px 5px rgb(255, 255, 255);
+    color: #0ee97b; 
+    transition: 1s;
+    font-weight: 100;
+}
+#secaovideo{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5px;
+    background:#0f0e1e;
+}  
+#div-interna{
+    display: inline-grid;
+    justify-content: start;
+    align-content: center;
+    flex: 1;
+}
+#titulo-video{
+    color: #3cffe6;
+    font-weight: bold;
+    margin: 5% 0 3% 0;
+    text-align: center;
+}
+
+#texto-video{
+    color: #FFFF;
+    text-align: center;
+}
+
+#video{
+    margin: 2% 0 2% 0;
+    padding-left: 25%;
+    max-width: 70%;
+}
+
+#carrossel{
+    background-color: #3c4253;
+    padding: 2%;
+    display: grid;
+    overflow: hidden;
+}
+
+#titulo-carrossel{
+    color: #FFF;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+#div-cards{
+    display: grid;
+    grid-auto-flow: column;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    margin-left: 2em;
+}
+
+#Bruna{
+    display: none;
+}
+
+.seta{
+   cursor: pointer;
+   transition: transform 0.5s ease;
+}
+#seta_esquerda{
+    display: none;
+}
+#seta_direita{
+    margin-left: 32px;
+}
+#seta_esquerda:hover{
+    transform: translateX(-7px);
+}
+#seta_direita:hover{
+    transform: translateX(7px);
+}
+
+#formulario{
+   text-align: center;
+   color: #fff;
+   
+}
+#titulo_formulario{
+    color: #FFF;
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;
+}
+input{
+    width: 300px;
+    height: 30px;
+    color: #000000;
+    margin: 10px;
+    border: 0px;
+    border-radius: 4px;
+    padding-left: 10px;
+
+}
+
+#botao_ementa{
+    background: #51f39a;   
+    cursor: pointer;
+    margin: 20px;
+    width: 250px;
+    height: 30px;
+    border: 0px;
+    border-radius: 4px;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+#botao_ementa:hover{
+    background-color: #ffffff;
+    transform: scale(0.9);
+    box-shadow: 0px 0px 20px 5px #50c96a;
+    transition: 0.3s;
+}
+#pato{
+    width: 200px;
+}
+
+/* OCULTAR SETAS DO CAMPO INPUT */
+#tel::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/* Carregamento */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(5 15 26); /* Cor de fundo com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loading-overlay img {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #000000dc;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 5%;
+    text-align: center;
+    transition: 1s;
+    color: #FFF;
+  }
+  .modal-content:hover {
+    background-color: rgb(252, 252, 252);
+    color: #000;
+    transform: scale(0.9);
+    box-shadow: 0px 0px 20px 5px #f5f5f5be;
+    
+  }
