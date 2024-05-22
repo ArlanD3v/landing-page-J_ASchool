@@ -72,20 +72,19 @@ document.getElementById('formulario').addEventListener('submit', function (event
 /* Não permitir acesso ao DevTools */
 document.addEventListener("contextmenu", eventHandler);
 document.addEventListener("keydown", eventHandler);
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function() {
     var modalNegacao = document.getElementById("modal-alert");
     if (modalNegacao.style.display === "block") {
         modalNegacao.style.display = "none";
     }
 });
-
 function eventHandler(event){
-    if(event.type === "contextmenu" || event.key === "F12"){
+    if(event.type === "contextmenu" || event.key === "F12" || event.ctrlKey && event.shiftKey && event.key === "I"||event.ctrlKey && event.shiftKey && event.key === "J" ){
         var modalNegacao = document.getElementById("modal-alert");
         modalNegacao.style.display = "block";
         event.preventDefault();
     }
-}
+};
 
 /* Carregamento */
 document.addEventListener("DOMContentLoaded", function () {
